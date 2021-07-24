@@ -13,6 +13,8 @@ page = requests.get(url)
 passwords = page.text.strip().split("\n")
 
 
+final_password = ""
+
 # iterate over passwords
 for password in tqdm(passwords, "Decrypting PDF"):
     
@@ -20,8 +22,11 @@ for password in tqdm(passwords, "Decrypting PDF"):
         # open PDF file
         with pikepdf.open("foo.pdf", password=password) as pdf:
             # Password decrypted successfully, break out of the loop
-            print("[+] Password found:", password)
+            #print("[+] Password found:", password)
+            final_password = password
             break
     except pikepdf._qpdf.PasswordError as e:
         # wrong password, just continue in the loop
         continue
+
+print('\033[92m' ,"[+] Password found:", password ,'\033[0m')
