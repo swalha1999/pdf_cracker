@@ -4,7 +4,7 @@ import requests
 
 
 
-url = 'https://raw.githubusercontent.com/x4nth055/pythoncode-tutorials/master/ethical-hacking/pdf-cracker/wordlist.txt'
+url = 'https://raw.githubusercontent.com/swalha1999/pdf_cracker/main/wordlist.txt'
 page = requests.get(url)
 
 
