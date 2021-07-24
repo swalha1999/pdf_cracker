@@ -29,4 +29,5 @@ for password in tqdm(passwords, "Decrypting PDF"):
         # wrong password, just continue in the loop
         continue
 
-print('\033[92m' ,"[+] Password found:", password ,'\033[0m')
+if final_password != "":
+    print('\033[92m' ,"[+] Password found:", password ,'\033[0m')
