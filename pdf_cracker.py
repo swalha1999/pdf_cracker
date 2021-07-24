@@ -30,4 +30,4 @@ for password in tqdm(passwords, "Decrypting PDF"):
         continue
 
 if final_password != "":
-    print('\033[92m' ,"[+] Password found:", password ,'\033[0m')
+    print('\033[92m' ,"[+] Password found:", final_password ,'\033[0m')
